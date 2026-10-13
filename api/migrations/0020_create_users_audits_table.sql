@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS users_audits (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    user_id BIGINT NOT NULL,
+    action VARCHAR(30) NOT NULL,
+    module VARCHAR(30) NOT NULL,
+    submodule VARCHAR(30) NOT NULL,
+    description TEXT NULL,
+    tags TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

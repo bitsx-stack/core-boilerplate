@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS users_auth_sessions_login_attempts (
+    id BIGSERIAL PRIMARY KEY,
+    attempts INT NOT NULL UNIQUE,
+    user_id BIGINT(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_user_id (user_id)
+);

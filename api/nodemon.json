@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "."
+  ],
+  "ext": "go",
+  "exec": "go mod tidy && go run main.go",
+  "signal": "SIGTERM",
+  "delay": "500"
+}

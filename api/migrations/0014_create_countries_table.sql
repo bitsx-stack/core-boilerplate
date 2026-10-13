@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS countries (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    continent_code VARCHAR(10) NOT NULL,
+    name VARCHAR(50) NOT NULL UNIQUE,
+    code VARCHAR(50) NOT NULL UNIQUE,
+    description TEXT NULL,
+    tags TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    deleted_by BIGINT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

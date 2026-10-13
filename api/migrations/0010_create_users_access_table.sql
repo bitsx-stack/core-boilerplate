@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS users_access (
+    id BIGSERIAL PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    permissions JSONB NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    deleted_by BIGINT
+);
